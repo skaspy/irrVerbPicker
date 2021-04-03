@@ -1,2 +1,2 @@
 # IrrVerbPicker
-A Java program that picks a random element from a list of irregular verbs.
+A Java program that picks random elements from a list of irregular verbs.

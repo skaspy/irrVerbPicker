@@ -81,6 +81,8 @@ public class WordPicker {
             fileName = "irrVerbs1.txt";
         } else if (yearOfLearning == 2){
             fileName = "irrVerbs2.txt";
+        } else if (yearOfLearning == 3){
+            fileName = "irrVerbs3.txt";
         } else {
             System.err.println("ERROR: The txt files with the verbs are "
                     + "missing!");}

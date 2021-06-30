@@ -27,7 +27,6 @@ package irrverbpicker;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.event.*;
 
 /**
  * This class provides the GUI for the project.
@@ -46,11 +45,13 @@ public class GUI extends JFrame {
   private JLabel lIrregularVerbPicker = new JLabel();
   private JRadioButton rb1Lernjahr = new JRadioButton();
   private JRadioButton rb2Lernjahr = new JRadioButton();
+  private JRadioButton rb3Lernjahr = new JRadioButton();
   private JTextArea jTextArea1 = new JTextArea("");
   private JScrollPane jTextArea1ScrollPane = new JScrollPane(jTextArea1);
   private JComboBox<String> jComboBox1 = new JComboBox<String>();
   private DefaultComboBoxModel<String> jComboBox1Model = new DefaultComboBoxModel<String>(amount);
   private JLabel lAnzahlderVerben = new JLabel();
+  private JLabel lLernjahr = new JLabel();
   private JButton bInfinitive = new JButton();
   private JButton bSimplePast = new JButton();
   private JButton bInfinitiveSimplePast = new JButton();
@@ -84,32 +85,48 @@ public class GUI extends JFrame {
     lIrregularVerbPicker.setText("Irregular Verb Picker");
     lIrregularVerbPicker.setFont(new Font("Dialog", Font.BOLD, 20));
     cp.add(lIrregularVerbPicker);
-    rb1Lernjahr.setBounds(28, 56, 100, 20);
+    
+    lLernjahr.setBounds(27, 56, 110, 20);
+    lLernjahr.setText("Lernjahr:");
+    cp.add(lLernjahr);
+    
+    rb1Lernjahr.setBounds(85, 56, 35, 20);
     rb1Lernjahr.setOpaque(false);
     rb1Lernjahr.setSelected(true);
-    rb1Lernjahr.setText("1. Lernjahr");
+    rb1Lernjahr.setText("1.");
     cp.add(rb1Lernjahr);
     rb1Lernjahr.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent evt) {
             rb1Lernjahr_ActionPerformed(evt);
         }
     });
-    rb2Lernjahr.setBounds(124, 56, 100, 20);
+    rb2Lernjahr.setBounds(120, 56, 35, 20);
     rb2Lernjahr.setOpaque(false);
-    rb2Lernjahr.setText("2. Lernjahr");
+    rb2Lernjahr.setText("2.");
     cp.add(rb2Lernjahr);
     rb2Lernjahr.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent evt) {
             rb2Lernjahr_ActionPerformed(evt);
         }
     });
+    rb3Lernjahr.setBounds(155, 56, 35, 20);
+    rb3Lernjahr.setOpaque(false);
+    rb3Lernjahr.setText("3.");
+    cp.add(rb3Lernjahr);
+    rb3Lernjahr.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent evt) {
+            rb3Lernjahr_ActionPerformed(evt);
+        }
+    });
     buttonGroup1.add(rb1Lernjahr);
     buttonGroup1.add(rb2Lernjahr);
+    buttonGroup1.add(rb3Lernjahr);
 
     jTextArea1ScrollPane.setBounds(24, 88, 265, 289);
     cp.add(jTextArea1ScrollPane);
+    
     jComboBox1.setModel(jComboBox1Model);
-    jComboBox1.setBounds(296, 80, 70, 20);
+    jComboBox1.setBounds(410, 56, 50, 20);
     cp.add(jComboBox1);
     lAnzahlderVerben.setBounds(296, 56, 110, 20);
     lAnzahlderVerben.setText("Anzahl der Verben");
@@ -168,7 +185,7 @@ public class GUI extends JFrame {
     cp.add(bPastParticiple);
    
     
-    bLoadVerbs.setBounds(296, 112, 123, 25);
+    bLoadVerbs.setBounds(296, 88, 123, 25);
     bLoadVerbs.setText("Pick verbs!");
     bLoadVerbs.setMargin(new Insets(2, 2, 2, 2));
     bLoadVerbs.addActionListener(new ActionListener() { 
@@ -228,6 +245,11 @@ public class GUI extends JFrame {
     wp.setYearOfLearning(2);
     wp.loadFile();
   } 
+  public void rb3Lernjahr_ActionPerformed(ActionEvent evt) {
+    wp.setYearOfLearning(3);
+    wp.loadFile();
+  } 
+    
   public void bInfintitiveSPPP_ActionPerformed(ActionEvent evt) {
     if (wp.getPicks() == null) {
         jTextArea1.setText(loadError);

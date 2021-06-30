@@ -43,8 +43,5 @@ public class IrrVerbPicker {
         WordPicker wp = new WordPicker();
         wp.loadFile();
         GUI gui = new GUI(wp);
-        
-
     }
-    
 }

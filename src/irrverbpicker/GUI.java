@@ -39,7 +39,7 @@ public class GUI extends JFrame {
   // Anfang Attribute
   private WordPicker wp;
   
-  private String loadError = "\"FEHLER: \\n\" + \"Zuerst den Button 'Pick verbs!' anklicken!!!\"";
+  private String loadError = "\"FEHLER: \nZuerst den Button 'Pick verbs!' anklicken!!!\"";
   private String[] amount = new String[] {"1","2","3","4","5","6","7","8","9","10","12","14","16","18","20"};
   
   private JLabel lIrregularVerbPicker = new JLabel();
@@ -95,28 +95,22 @@ public class GUI extends JFrame {
     rb1Lernjahr.setSelected(true);
     rb1Lernjahr.setText("1.");
     cp.add(rb1Lernjahr);
-    rb1Lernjahr.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent evt) {
-            rb1Lernjahr_ActionPerformed(evt);
-        }
+    rb1Lernjahr.addActionListener((ActionEvent evt) -> {
+        rb1Lernjahr_ActionPerformed(evt);
     });
     rb2Lernjahr.setBounds(120, 56, 35, 20);
     rb2Lernjahr.setOpaque(false);
     rb2Lernjahr.setText("2.");
     cp.add(rb2Lernjahr);
-    rb2Lernjahr.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent evt) {
-            rb2Lernjahr_ActionPerformed(evt);
-        }
+    rb2Lernjahr.addActionListener((ActionEvent evt) -> {
+        rb2Lernjahr_ActionPerformed(evt);
     });
     rb3Lernjahr.setBounds(155, 56, 35, 20);
     rb3Lernjahr.setOpaque(false);
     rb3Lernjahr.setText("3.");
     cp.add(rb3Lernjahr);
-    rb3Lernjahr.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent evt) {
-            rb3Lernjahr_ActionPerformed(evt);
-        }
+    rb3Lernjahr.addActionListener((ActionEvent evt) -> {
+        rb3Lernjahr_ActionPerformed(evt);
     });
     buttonGroup1.add(rb1Lernjahr);
     buttonGroup1.add(rb2Lernjahr);
@@ -137,6 +131,7 @@ public class GUI extends JFrame {
     bInfinitive.setMargin(new Insets(2, 2, 2, 2));
     bInfinitive.setBackground(new Color(0xB8CFE5));
     bInfinitive.addActionListener(new ActionListener() { 
+      @Override
       public void actionPerformed(ActionEvent evt) { 
         bSimpePresent_ActionPerformed(evt);
       }
@@ -148,6 +143,7 @@ public class GUI extends JFrame {
     bSimplePast.setMargin(new Insets(2, 2, 2, 2));
     bSimplePast.setBackground(new Color(0xB8CFE5));
     bSimplePast.addActionListener(new ActionListener() { 
+      @Override
       public void actionPerformed(ActionEvent evt) { 
         bSimplePast_ActionPerformed(evt);
       }
@@ -158,6 +154,7 @@ public class GUI extends JFrame {
     bInfinitiveSimplePast.setMargin(new Insets(2, 2, 2, 2));
     bInfinitiveSimplePast.setBackground(new Color(0xB8CFE5));
     bInfinitiveSimplePast.addActionListener(new ActionListener() { 
+      @Override
       public void actionPerformed(ActionEvent evt) { 
         bSimplePresentSimplePast_ActionPerformed(evt);
       }
@@ -168,6 +165,7 @@ public class GUI extends JFrame {
     bInfinitiveSPPP.setMargin(new Insets(2, 2, 2, 2));
     bInfinitiveSPPP.setBackground(new Color(0xCFE5B8));
     bInfinitiveSPPP.addActionListener(new ActionListener() { 
+      @Override
       public void actionPerformed(ActionEvent evt) { 
         bInfintitiveSPPP_ActionPerformed(evt);
       }
@@ -178,6 +176,7 @@ public class GUI extends JFrame {
     bPastParticiple.setMargin(new Insets(2, 2, 2, 2));
     bPastParticiple.setBackground(new Color(0xCFE5B8));
     bPastParticiple.addActionListener(new ActionListener() { 
+      @Override
       public void actionPerformed(ActionEvent evt) { 
         bPastParticiple_ActionPerformed(evt);
       }
@@ -189,6 +188,7 @@ public class GUI extends JFrame {
     bLoadVerbs.setText("Pick verbs!");
     bLoadVerbs.setMargin(new Insets(2, 2, 2, 2));
     bLoadVerbs.addActionListener(new ActionListener() { 
+      @Override
       public void actionPerformed(ActionEvent evt) { 
         bLoadVerbs_ActionPerformed(evt);
       }
@@ -231,8 +231,8 @@ public class GUI extends JFrame {
   } // end of bSimplePresentSimplePast_ActionPerformed
 
   public void bLoadVerbs_ActionPerformed(ActionEvent evt) {
-    int amount = Integer.parseInt(jComboBox1.getSelectedItem().toString());
-    wp.pickVerbs(amount);
+    int number = Integer.parseInt(jComboBox1.getSelectedItem().toString());
+    wp.pickVerbs(number);
     
   } // end of bLoadVerbs_ActionPerformed
 

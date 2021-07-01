@@ -32,7 +32,7 @@ package irrverbpicker;
  * 
  * @author Sabine Kasparek
  * @since 10/2020
- * @version 1.0
+ * @version 1.1
  */
 public class IrrVerbPicker {
 

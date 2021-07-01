@@ -28,6 +28,7 @@ package irrverbpicker;
  * Each Entry obj consists of three different strings:
  * the infintive, the simple past and the past participle form of the verb.
  * 
+ * @version 1.1
  * @author Sabine Kasparek
  */
 class Entry {

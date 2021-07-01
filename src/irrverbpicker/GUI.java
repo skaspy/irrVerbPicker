@@ -31,7 +31,7 @@ import javax.swing.*;
 /**
  * This class provides the GUI for the project.
  *
- * @version 1.0 
+ * @version 1.1 
  * @author Sabine Kasparek
  */
 
@@ -46,6 +46,7 @@ public class GUI extends JFrame {
   private JRadioButton rb1Lernjahr = new JRadioButton();
   private JRadioButton rb2Lernjahr = new JRadioButton();
   private JRadioButton rb3Lernjahr = new JRadioButton();
+  private JRadioButton rb4Lernjahr = new JRadioButton();
   private JTextArea jTextArea1 = new JTextArea("");
   private JScrollPane jTextArea1ScrollPane = new JScrollPane(jTextArea1);
   private JComboBox<String> jComboBox1 = new JComboBox<String>();
@@ -112,9 +113,17 @@ public class GUI extends JFrame {
     rb3Lernjahr.addActionListener((ActionEvent evt) -> {
         rb3Lernjahr_ActionPerformed(evt);
     });
+    rb4Lernjahr.setBounds(190, 56, 35, 20);
+    rb4Lernjahr.setOpaque(false);
+    rb4Lernjahr.setText("4.");
+    cp.add(rb4Lernjahr);
+    rb4Lernjahr.addActionListener((ActionEvent evt) -> {
+        rb4Lernjahr_ActionPerformed(evt);
+    });
     buttonGroup1.add(rb1Lernjahr);
     buttonGroup1.add(rb2Lernjahr);
     buttonGroup1.add(rb3Lernjahr);
+    buttonGroup1.add(rb4Lernjahr);
 
     jTextArea1ScrollPane.setBounds(24, 88, 265, 289);
     cp.add(jTextArea1ScrollPane);
@@ -249,7 +258,11 @@ public class GUI extends JFrame {
     wp.setYearOfLearning(3);
     wp.loadFile();
   } 
-    
+  public void rb4Lernjahr_ActionPerformed(ActionEvent evt) {
+    wp.setYearOfLearning(4);
+    wp.loadFile();
+  } 
+  
   public void bInfintitiveSPPP_ActionPerformed(ActionEvent evt) {
     if (wp.getPicks() == null) {
         jTextArea1.setText(loadError);

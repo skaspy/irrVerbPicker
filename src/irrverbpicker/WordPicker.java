@@ -39,7 +39,7 @@ import java.util.Scanner;
  * forms) can be changed without any problems.
  * 
  * @author Sabine Kasparek
- * @version 1.0
+ * @version 1.1
  */
 
 public class WordPicker {
@@ -83,6 +83,8 @@ public class WordPicker {
             fileName = "irrVerbs2.txt";
         } else if (yearOfLearning == 3){
             fileName = "irrVerbs3.txt";
+        } else if (yearOfLearning == 4){
+            fileName = "irrVerbs4.txt";
         } else {
             System.err.println("ERROR: The txt files with the verbs are "
                     + "missing!");}

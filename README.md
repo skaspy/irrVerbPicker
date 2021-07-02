@@ -9,7 +9,6 @@ It is possible to choose the amount of verbs you want to pick and which grammati
 ## Install
 ### Prerequisits
 * Have min. [Java SE 8](https://www.java.com)
-* Have any Java IDE (e.g. [Apache NetBeans](https://netbeans.apache.org)) installed on your local machine
 
 ### Getting started
 1. Get a clone of this project:  `git clone git://github.com/skaspy/IrrVerbPicker.git`

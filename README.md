@@ -19,7 +19,7 @@ It is possible to choose the amount of verbs you want to pick and which grammati
   * run IrrVerbPicker via command line: `java -jar IrrVerbPicker.jar`
 
 ## Contributing
-Thank you for considering contributing to IrrVerbPicker. Just create a pull request or contact me.
+Thank you for considering contributing to IrrVerbPicker. Just create a pull request or contact [me](mailto:bee.coding@gmx.de).
 
 ## License
 [MIT License](https://opensource.org/licenses/mit-license.php)

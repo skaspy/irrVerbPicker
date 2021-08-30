@@ -6,7 +6,7 @@ IrrVerbPicker is a program that picks random elements from a list of irregular E
  
 It is possible to choose the amount of verbs you want to pick and which grammatical form or combination of forms you want to display. The lists of irregular verbs match the Bavarian version of the Green Line series (G9 LehrplanPlus/E1).
 
-## Install
+## How to get a copy
 ### Prerequisites
 * Have minimum [Java SE 8](https://www.java.com) installed on your OS.
 

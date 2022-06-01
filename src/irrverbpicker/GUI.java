@@ -31,7 +31,7 @@ import javax.swing.*;
 /**
  * This class provides the GUI for the project.
  *
- * @version 1.1 
+ * @version 1.2
  * @author Sabine Kasparek
  */
 
@@ -47,6 +47,10 @@ public class GUI extends JFrame {
   private JRadioButton rb2Lernjahr = new JRadioButton();
   private JRadioButton rb3Lernjahr = new JRadioButton();
   private JRadioButton rb4Lernjahr = new JRadioButton();
+  private JRadioButton rb5Lernjahr = new JRadioButton();
+  private JRadioButton rb6Lernjahr = new JRadioButton();
+  
+  
   private JTextArea jTextArea1 = new JTextArea("");
   private JScrollPane jTextArea1ScrollPane = new JScrollPane(jTextArea1);
   private JComboBox<String> jComboBox1 = new JComboBox<String>();
@@ -91,7 +95,7 @@ public class GUI extends JFrame {
     lLernjahr.setText("Lernjahr:");
     cp.add(lLernjahr);
     
-    rb1Lernjahr.setBounds(85, 56, 35, 20);
+    rb1Lernjahr.setBounds(80, 56, 35, 20);
     rb1Lernjahr.setOpaque(false);
     rb1Lernjahr.setSelected(true);
     rb1Lernjahr.setText("1.");
@@ -99,31 +103,47 @@ public class GUI extends JFrame {
     rb1Lernjahr.addActionListener((ActionEvent evt) -> {
         rb1Lernjahr_ActionPerformed(evt);
     });
-    rb2Lernjahr.setBounds(120, 56, 35, 20);
+    rb2Lernjahr.setBounds(115, 56, 35, 20);
     rb2Lernjahr.setOpaque(false);
     rb2Lernjahr.setText("2.");
     cp.add(rb2Lernjahr);
     rb2Lernjahr.addActionListener((ActionEvent evt) -> {
         rb2Lernjahr_ActionPerformed(evt);
     });
-    rb3Lernjahr.setBounds(155, 56, 35, 20);
+    rb3Lernjahr.setBounds(150, 56, 35, 20);
     rb3Lernjahr.setOpaque(false);
     rb3Lernjahr.setText("3.");
     cp.add(rb3Lernjahr);
     rb3Lernjahr.addActionListener((ActionEvent evt) -> {
         rb3Lernjahr_ActionPerformed(evt);
     });
-    rb4Lernjahr.setBounds(190, 56, 35, 20);
+    rb4Lernjahr.setBounds(185, 56, 35, 20);
     rb4Lernjahr.setOpaque(false);
     rb4Lernjahr.setText("4.");
     cp.add(rb4Lernjahr);
     rb4Lernjahr.addActionListener((ActionEvent evt) -> {
         rb4Lernjahr_ActionPerformed(evt);
     });
+    rb5Lernjahr.setBounds(220, 56, 35, 20);
+    rb5Lernjahr.setOpaque(false);
+    rb5Lernjahr.setText("5.");
+    cp.add(rb5Lernjahr);
+    rb5Lernjahr.addActionListener((ActionEvent evt) -> {
+        rb5Lernjahr_ActionPerformed(evt);
+    });
+    rb6Lernjahr.setBounds(250, 56, 35, 20);
+    rb6Lernjahr.setOpaque(false);
+    rb6Lernjahr.setText("6.");
+    cp.add(rb6Lernjahr);
+    rb6Lernjahr.addActionListener((ActionEvent evt) -> {
+        rb6Lernjahr_ActionPerformed(evt);
+    });
     buttonGroup1.add(rb1Lernjahr);
     buttonGroup1.add(rb2Lernjahr);
     buttonGroup1.add(rb3Lernjahr);
     buttonGroup1.add(rb4Lernjahr);
+    buttonGroup1.add(rb5Lernjahr);
+    buttonGroup1.add(rb6Lernjahr);
 
     jTextArea1ScrollPane.setBounds(24, 88, 265, 289);
     cp.add(jTextArea1ScrollPane);
@@ -205,7 +225,7 @@ public class GUI extends JFrame {
     cp.add(bLoadVerbs);
     
     jLabel1.setBounds(24, 376, 150, 20);
-    jLabel1.setText("© 2021 Sabine Kasparek");
+    jLabel1.setText("© 2021-22 S. Kasparek");
     jLabel1.setFont(new Font("Dialog", Font.PLAIN, 10));
     jLabel1.setForeground(Color.GRAY);
     cp.add(jLabel1);
@@ -260,6 +280,14 @@ public class GUI extends JFrame {
   } 
   public void rb4Lernjahr_ActionPerformed(ActionEvent evt) {
     wp.setYearOfLearning(4);
+    wp.loadFile();
+  } 
+  public void rb5Lernjahr_ActionPerformed(ActionEvent evt) {
+    wp.setYearOfLearning(5);
+    wp.loadFile();
+  } 
+  public void rb6Lernjahr_ActionPerformed(ActionEvent evt) {
+    wp.setYearOfLearning(6);
     wp.loadFile();
   } 
   

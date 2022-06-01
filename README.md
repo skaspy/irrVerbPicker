@@ -1,8 +1,9 @@
 <div align="center">
 
-[![License](https://img.shields.io/github/license/skaspy/irrVerbPicker)](https://github.com/technowledgy/vue-h5p/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/skaspy/irrVerbPicker)](https://github.com/skaspy/irrVerbPicker/blob/main/LICENSE)
 [![CodeSize](https://img.shields.io/github/languages/code-size/skaspy/irrVerbPicker)](https://github.com/skaspy/irrVerbPicker)
-![Java](https://img.shields.io/badge/language-Java%208-orange)
+[![Java](https://img.shields.io/badge/language-Java%208-orange)](https://github.com/skaspy/irrVerbPicker/search?l=java)
+[![Release](https://img.shields.io/github/v/release/skaspy/irrVerbPicker)](https://github.com/skaspy/irrVerbPicker/releases)
 
 </div>
 

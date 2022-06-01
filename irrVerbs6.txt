@@ -1,9 +1,10 @@
-Error: Not supported yet!
+# Error: Not supported yet!
+#
 # Support expected from fall 2022!
 #
 # Come back in fall 2022
 # or feel free to create
-# your won list.
+# your own list.
 #
 #
 #

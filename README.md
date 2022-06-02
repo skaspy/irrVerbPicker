@@ -24,22 +24,27 @@ It is possible to choose the amount of verbs you want to pick and which grammati
 ### Prerequisites
 * Have minimum [Java SE 8](https://www.java.com) installed on your OS.
 
-### Getting started
-1. Get a clone of this project:  `git clone git://github.com/skaspy/IrrVerbPicker.git`
-2. Open it in your Java IDE.
-3. Run the program within your IDE or create a *.jar* file to use it in any environment.
-4. Once you have the *.jar* file you can:
-  * run IrrVerbPicker via double click on the file
+### Getting started as a user
+1. Download the [release files](https://github.com/skaspy/irrVerbPicker/releases). (You don't need the source-code files.)
+2. Make sure you have [Java Runtime Environment](https://java.com/download) (JRE) installed on your computer.
+3. Now you can either:
+  * run IrrVerbPicker via double click on the *.jar* file or
   * run IrrVerbPicker via command line: `java -jar IrrVerbPicker.jar`
+
+### Getting started as a developer
+1. Use [Git](https://git-scm.com) to get a clone of this project:  `git clone git://github.com/skaspy/IrrVerbPicker.git`
+2. Open or import it with your Java IDE (e.g. [NetBeans](https://netbeans.apache.org/))
+3. Run the program within your IDE or build a *.jar* file to use it in any environment.
 
 ## Customize verb lists
 If you want to adjust the verb lists to your students' learning level or a different English class book, you can easily modify the *.txt* files. Just delete or add verbs. Be careful to stick to the correct layout pattern:
-1. Only one verb per line
-2. Seperate infinitive, simple past and past participle by a colon (e.g. go:went:gone)
-3. Don't change the filenames of the *.txt* files!
+1. Only one verb per line!
+2. No blank lines in between!
+3. Seperate infinitive, simple past and past participle by a colon (e.g. *go:went:gone*)!
+4. Don't change the filenames of the *.txt* files!
 
 ## Contributing
-Thank you for considering contributing to IrrVerbPicker. Just create a pull request or contact [me](mailto:bee.coding@gmx.de).
+Thank you for considering contributing to IrrVerbPicker. Just create a pull request or [contact](mailto:bee.coding@gmx.de) me.
 
 ## License
 [MIT License](https://opensource.org/licenses/mit-license.php)

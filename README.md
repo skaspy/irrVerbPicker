@@ -10,7 +10,7 @@
 
 # IrrVerbPicker
 
-**Source code and documentation are mostly in English. Since this project targets primarily English teachers and English learners in Germany some bits and pieces (e.g. error messages) are written in German.**
+**Source code and documentation are mostly in English. Since this project targets primarily English teachers and English learners in Bavaria some bits and pieces are written in German.**
 
 IrrVerbPicker is a program that picks random elements from a list of irregular English verbs. Learners of English as a foreign language and English teachers can use it to revise the long list of irregular verbs.
  
@@ -33,7 +33,7 @@ It is possible to choose the amount of verbs you want to pick and which grammati
   * run IrrVerbPicker via command line: `java -jar IrrVerbPicker.jar`
 
 ## Customize verb lists
-If you want to adjust the verb lists to your students' learning level, you can easily modify the *.txt* files. Just delete or add verbs. Be careful to stick to the correct layout pattern:
+If you want to adjust the verb lists to your students' learning level or a different English class book, you can easily modify the *.txt* files. Just delete or add verbs. Be careful to stick to the correct layout pattern:
 1. Only one verb per line
 2. Seperate infinitive, simple past and past participle by a colon (e.g. go:went:gone)
 3. Don't change the filenames of the *.txt* files!
